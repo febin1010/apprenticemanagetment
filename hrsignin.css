@@ -1,0 +1,182 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+a {
+    color: #fefeff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Header */
+header {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .heading {
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+/* Sign In Section */
+.signin {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin .content {
+    background-color: #FFE0B3; /* Light orange */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 360px;
+    width: 100%;
+}
+
+.signin .title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.signinForm .input1 {
+    margin-bottom: 15px;
+}
+
+.signinForm .label1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signinForm .input2 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signinForm input[type="email"],
+.signinForm input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 1rem;
+    border: 1px solid #FF8C42; /* Medium orange */
+    border-radius: 4px;
+}
+
+.signinForm .button {
+    margin-top: 15px;
+}
+
+.signinForm button {
+    width: 100%;
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.signinForm button:hover {
+    background-color: #FF7A1A; /* Slightly darker orange */
+}
+
+/* Footer */
+footer {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .signin {
+        padding: 20px 10px;
+    }
+
+    .signin .content {
+        padding: 15px;
+    }
+
+    .signin .title {
+        font-size: 1.25rem;
+    }
+
+    .signinForm input[type="email"],
+    .signinForm input[type="password"] {
+        padding: 10px;
+    }
+
+    .signinForm button {
+        padding: 10px;
+        font-size: 0.875rem;
+    }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    transition: all 0.3s ease-in-out;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.5); /* Medium orange shadow */
+}
+
+::selection {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+}

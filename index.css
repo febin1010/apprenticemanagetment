@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #0df6d7; /* Medium orange */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .heading {
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.logo-text-container {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    text-align: center;
+}
+
+.logo-text h1, .logo-text h2 {
+    margin: 0; /* Remove default margins */
+}
+
+.logo-text h2, .logo-text h1 {
+    font-family: Monospace;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #e0ffff; /* Light aquamarine blue */
+    padding: 40px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.button {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.apprentice-button {
+    background-color: #003580;
+}
+
+.apprentice-button:hover {
+    background-color: #00274a;
+}
+
+.ro-button {
+    background-color: #26c206;
+}
+
+.ro-button:hover {
+    background-color: #1f9f05;
+}
+
+.hr-button {
+    background-color: #FF8C42;
+}
+
+.hr-button:hover {
+    background-color: #cc6f33;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #0df6d7; /* Medium orange */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-text-container {
+        margin-top: 10px;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+}

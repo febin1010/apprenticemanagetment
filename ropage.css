@@ -1,0 +1,289 @@
+/* Reset some default styles */
+body, h2, h3, p, ul, ol, li, form, input, button, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding to make the header smaller */
+    background-color: #5c6bc0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 97%;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+}
+
+.header h2 {
+    margin: 5px 0 0 0;
+    font-size: 18px; /* Adjust font size */
+}
+
+.logout-button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.logout-button input[type="submit"] {
+    background-color: #5c6bc0;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    width: auto;
+}
+
+.logout-button input[type="submit"]:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button input[type="submit"]:active {
+    background-color: #5c6bc0;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+    color: #333;
+    line-height: 1.6;
+    padding: 0px;
+    overflow-x: hidden;
+    height: 100vh; /* Ensure the body takes the full viewport height */
+
+}
+
+
+.form-container {
+    max-width: 98%;
+    width: 97%;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* User info */
+.user-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5c6bc0;
+}
+
+/* Period selector */
+.period-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.period-selector button {
+    background-color: #5c6bc0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.period-selector button:hover {
+    background-color: #3f51b5;
+}
+
+#period-label {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Apprentices tables */
+.apprentices-tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.apprentices-table {
+    flex: 1;
+    min-width: 300px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.apprentices-table h3 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: #fff;
+}
+
+.apprentices-table table {
+    width: 100%;
+    border-collapse: collapse;
+    flex: 1; /* Make the table take all remaining space */
+    overflow-y: auto; /* Make the table scrollable if content overflows */
+
+}
+
+.apprentices-table th, .apprentices-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.apprentices-table th {
+    background-color: #5c6bc0;
+    color: #000000;
+}
+
+/* Consistent column widths */
+.apprentices-table th:nth-child(1), .apprentices-table td:nth-child(1) {
+    width: 30%; /* Adjust as needed */
+}
+
+.apprentices-table th:nth-child(2), .apprentices-table td:nth-child(2),
+.apprentices-table th:nth-child(3), .apprentices-table td:nth-child(3),
+.apprentices-table th:nth-child(4), .apprentices-table td:nth-child(4) {
+    width: 23.33%; /* Adjust as needed */
+}
+
+.apprentices-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.apprentices-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.submitted-apprentices th, .submitted-apprentices td {
+    background-color: #ddffdf;
+}
+
+.not-submitted-apprentices th, .not-submitted-apprentices td {
+    background-color: #f5d6d6;
+}
+
+.score-button {
+    background-color: #5c6bc0;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.score-button:hover {
+    background-color: #3f51b5;
+}
+
+.reject-button {
+    background-color: #e57373; /* Red background for reject */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reject-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+/* Spinner styles */
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #5c6bc0;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .logout-button input, .period-selector button, .score-button {
+        padding: 8px 16px;
+    }
+
+    .period-selector {
+        flex-direction: column;
+    }
+
+    #period-label {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .logout-button input, .period-selector button, .score-button {
+        padding: 6px 12px;
+    }
+
+    .period-selector {
+        flex-direction: column;
+    }
+
+    #period-label {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .apprentices-table th, .apprentices-table td {
+        padding: 8px;
+    }
+
+    .apprentices-table h3 {
+        font-size: 18px;
+    }
+
+    .user-info h2 {
+        font-size: 20px;
+    }
+}

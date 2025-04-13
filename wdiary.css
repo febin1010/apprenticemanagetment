@@ -1,0 +1,474 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding to make the header smaller */
+    background-color: #4CAF50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+}
+
+.header h2 {
+    margin: 5px 0 0 0;
+    font-size: 18px; /* Adjust font size */
+}
+
+.logout-button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.logout-button input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    width: auto;
+}
+
+.logout-button input[type="submit"]:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button input[type="submit"]:active {
+    background-color: #388E3C;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.calendar-container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-header button:hover {
+    background: #45a049;
+}
+
+#month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    text-align: center;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.date {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.date:hover {
+    background: #f0f0f0;
+}
+
+.date.active {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Existing styles from wdiary.css */
+.form-container {
+    width: 100%;
+    max-width: 96%; /* Set a max-width for the form container */
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+
+.work-diary-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.row.top-row {
+    gap: 20px;
+}
+
+.input-group {
+    flex: 1;
+    max-width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+
+.learnings-section {
+    margin-top: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.learnings-section table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.learnings-section th, .learnings-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.learnings-section th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.learnings-section th:nth-child(1),
+.learnings-section td:nth-child(1) {
+    width: 120px;
+}
+
+.learnings-section th:nth-child(3),
+.learnings-section td:nth-child(3) {
+    width: 100px;
+}
+
+.learnings-section td input[type="date"],
+.learnings-section td input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ddd !important;
+}
+
+.learnings-section td input[type="date"]:focus,
+.learnings-section td input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.row input[type="submit"],
+.learnings-section td button[type="submit"] {
+    align-self: center;
+    padding: 8px 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.row input[type="submit"]:hover,
+.learnings-section td button[type="submit"]:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.row input[type="submit"]:active,
+.learnings-section td button[type="submit"]:active {
+    background-color: #388E3C;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 2200px) and (min-width: 767px) {
+    .row.top-row .input-group input[type="text"] {
+        width: 30% !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .input-group textarea {
+
+        width: auto;
+        height: 150px; /* Increased height for mobile view */
+    }
+
+    .learnings-section th:nth-child(1),
+    .learnings-section td:nth-child(1) {
+        width: 120px;
+    }
+
+    .learnings-section th:nth-child(3),
+    .learnings-section td:nth-child(3) {
+        width: 70px;
+    }
+
+    .learnings-section th, .learnings-section td {
+        font-size: 12px;
+    }
+
+    .submit-row {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row input[type="submit"],
+    .learnings-section td button[type="submit"] {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .logout-button{
+        text-align: center;
+    }
+
+    .logout-button input[type="submit"]{
+        width: auto;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+    }
+
+    .row {
+        gap: 5px;
+    }
+
+    .input-group label {
+        font-size: 12px;
+    }
+
+    .input-group input {
+        padding: 8px;
+    }
+
+    .learnings-section th:nth-child(1),
+    .learnings-section td:nth-child(1) {
+        width: 120px;
+    }
+
+    .learnings-section th:nth-child(3),
+    .learnings-section td:nth-child(3) {
+        width: 50px;
+    }
+
+    .learnings-section th, .learnings-section td {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .submit-row {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row input[type="submit"],
+    .learnings-section td button[type="submit"], 
+    .logout-button input[type="submit"] {
+        width: 100%;
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+}
+
+
+.final-submit-button {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.final-submit-button input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.final-submit-button input[type="submit"]:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.final-submit-button input[type="submit"]:active {
+    background-color: #388E3C;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: medium;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+    height: 150px; /* Increased height for the text area */
+}
+
+.input-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Styles for the Add Note, Previous Period, and Next Period buttons */
+#add-note-button,
+#prev-period-button,
+#next-period-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    width: auto;
+}
+
+#add-note-button:hover,
+#prev-period-button:hover,
+#next-period-button:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#add-note-button:active,
+#prev-period-button:active,
+#next-period-button:active {
+    background-color: #388E3C;
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

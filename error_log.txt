@@ -1,0 +1,52 @@
+[10-Jul-2024 16:15:04 UTC] Received request to finalize. APPR_ID_NO: G/24/119, WD_PERIOD: May 2024 - June 2024
+[10-Jul-2024 16:15:04 UTC] Fetched apprentice_id: 2 for APPR_ID_NO: G/24/119
+[10-Jul-2024 16:15:04 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[10-Jul-2024 16:15:04 UTC] Successfully updated finalize status for apprentice_id: 2, period_id: 1
+[10-Jul-2024 16:15:04 UTC] Current date is past the 20th of the end period month
+[10-Jul-2024 16:15:05 UTC] Successfully inserted next period: July 2024 - August 2024
+[10-Jul-2024 17:30:32 UTC] Received request to finalize. APPR_ID_NO: G/24/119, WD_PERIOD: May 2024 - June 2024
+[10-Jul-2024 17:30:32 UTC] Fetched apprentice_id: 2 for APPR_ID_NO: G/24/119
+[10-Jul-2024 17:30:32 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[10-Jul-2024 17:30:32 UTC] Successfully updated finalize status for apprentice_id: 2, period_id: 1
+[10-Jul-2024 17:30:32 UTC] Current date is past the 20th of the end period month
+[10-Jul-2024 17:30:33 UTC] Successfully inserted next period: July 2024 - August 2024
+[11-Jul-2024 05:14:20 UTC] Received request to finalize. APPR_ID_NO: G/24/119, WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 05:14:21 UTC] Fetched apprentice_id: 2 for APPR_ID_NO: G/24/119
+[11-Jul-2024 05:14:21 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 05:14:21 UTC] Successfully updated finalize status for apprentice_id: 2, period_id: 1
+[11-Jul-2024 05:14:21 UTC] Current date is past the 20th of the end period month
+[11-Jul-2024 05:14:21 UTC] Next period already exists: July 2024 - August 2024
+[11-Jul-2024 09:02:00 UTC] Received request to finalize. APPR_ID_NO: G/24/119, WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 09:02:00 UTC] Fetched apprentice_id: 2 for APPR_ID_NO: G/24/119
+[11-Jul-2024 09:02:00 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 09:02:00 UTC] Successfully updated finalize status for apprentice_id: 2, period_id: 1
+[11-Jul-2024 09:02:00 UTC] Current date is past the 20th of the end period month
+[11-Jul-2024 09:02:00 UTC] Next period already exists: July 2024 - August 2024
+[11-Jul-2024 09:25:07 UTC] Received request to finalize. APPR_ID_NO: G/24/119, WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 09:25:07 UTC] Fetched apprentice_id: 2 for APPR_ID_NO: G/24/119
+[11-Jul-2024 09:25:07 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[11-Jul-2024 09:25:07 UTC] Successfully updated finalize status for apprentice_id: 2, period_id: 1
+[11-Jul-2024 09:25:07 UTC] Current date is past the 20th of the end period month
+[11-Jul-2024 09:25:07 UTC] Next period already exists: July 2024 - August 2024
+[12-Jul-2024 07:04:25 UTC] Received request to finalize. APPR_ID_NO: G/00/000, WD_PERIOD: June 2024 - July 2024
+[12-Jul-2024 07:04:25 UTC] Fetched apprentice_id: 6 for APPR_ID_NO: G/00/000
+[12-Jul-2024 07:04:25 UTC] Fetched period_id: 2 for WD_PERIOD: June 2024 - July 2024
+[12-Jul-2024 07:04:25 UTC] Successfully updated finalize status for apprentice_id: 6, period_id: 2
+[12-Jul-2024 07:17:49 UTC] Received request to finalize. APPR_ID_NO: G/00/000, WD_PERIOD: May 2024 - June 2024
+[12-Jul-2024 07:17:49 UTC] Fetched apprentice_id: 6 for APPR_ID_NO: G/00/000
+[12-Jul-2024 07:17:49 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[12-Jul-2024 07:17:49 UTC] Successfully updated finalize status for apprentice_id: 6, period_id: 1
+[12-Jul-2024 07:17:49 UTC] Current date is past the 20th of the end period month
+[12-Jul-2024 07:17:49 UTC] Successfully inserted next period: July 2024 - August 2024
+[15-Jul-2024 14:19:35 UTC] Received request to finalize. APPR_ID_NO: G/00/001, WD_PERIOD: May 2024 - June 2024
+[15-Jul-2024 14:19:35 UTC] Fetched apprentice_id: 12 for APPR_ID_NO: G/00/001
+[15-Jul-2024 14:19:35 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[15-Jul-2024 14:19:35 UTC] Successfully updated finalize status for apprentice_id: 12, period_id: 1
+[15-Jul-2024 14:19:35 UTC] Current date is past the 20th of the end period month
+[15-Jul-2024 14:19:35 UTC] Successfully inserted next period: July 2024 - August 2024
+[15-Jul-2024 17:05:44 UTC] Received request to finalize. APPR_ID_NO: G/00/002, WD_PERIOD: May 2024 - June 2024
+[15-Jul-2024 17:05:44 UTC] Fetched apprentice_id: 16 for APPR_ID_NO: G/00/002
+[15-Jul-2024 17:05:44 UTC] Fetched period_id: 1 for WD_PERIOD: May 2024 - June 2024
+[15-Jul-2024 17:05:44 UTC] Successfully updated finalize status for apprentice_id: 16, period_id: 1
+[15-Jul-2024 17:05:44 UTC] Current date is past the 20th of the end period month
+[15-Jul-2024 17:05:44 UTC] Next period already exists: July 2024 - August 2024

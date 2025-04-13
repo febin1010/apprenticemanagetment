@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hrsignin.css">
+    <title>Admin/HR Sign In</title>
+    <style>
+        .page {
+            display: none;
+        }
+    
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+    
+        .logo img {
+            height: 50px; /* Adjust the height as needed */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        .logo-text-container {
+            flex: 1; /* Take up remaining space */
+            display: flex;
+            justify-content: center; /* Center text horizontally */
+            align-items: center; /* Center text vertically */
+            text-align: center;
+        }
+
+        .logo-text h1, .logo-text h2 {
+            margin: 0; /* Remove default margins */
+        }
+        
+        .logo-text h2{
+            font-family: Monospace;
+        }
+
+        .logo-text h1{
+            font-family: Monospace;
+        }
+
+
+     /* Media query for smaller screens */
+     @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-text-container {
+                margin-top: 10px;
+            }
+
+            .logout-button {
+                margin-top: 10px;
+            }
+        }
+    </style> 
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="http://workdiary.kochimetro.org" ><img src="./Koch_Metro_Logo.png" alt="KMRL Logo"></a>
+            </div>
+            <div class="logo-text-container">
+                <div class="logo-text">
+                    <h1>HUMAN RESOURCES </h1>
+                    <h2>TRAINING & DEVELOPMENT DIVISION</h2>
+                </div>
+            </div>         
+        </header>
+        <section class="signin">
+            <div class="content">
+                <div class="title"><span>Admin/HR Sign In</span></div>
+                <div class="signinForm">
+                    <form id="signinForm" action="hrprocess_signin.php" method="post">
+                        <div class="input1">
+                            <div class="label1">Your Email</div>
+                            <div class="input2">
+                                <input type="email" name="email" id="email" placeholder="Enter your Email here" required>
+                            </div>
+                            <br>
+                            <div class="label1">
+                                <label>Your Password</label>
+                            </div>
+                            <div class="input2 password-container">
+                                <input type="password" name="password" id="password" placeholder="Enter your Password here" required>
+                            </div>
+                            <br>
+                            <div class="button">
+                                <button type="submit">Sign In</button>
+                            </div>
+                            <div class="message" id="message"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer">
+        </div>
+    </footer>
+</body>
+</html>
+

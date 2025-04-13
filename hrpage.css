@@ -1,0 +1,1757 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    position: relative;
+    z-index: 2000; /* Ensure header is above other elements */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile {
+    position: relative;
+}
+
+.dpicn {
+    font-size: 25px; /* Adjust the size of the emoji */
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333 !important;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.9s ease, max-height 0.9s ease 0.9s;
+    white-space: nowrap; /* Ensure text does not break into multiple lines */
+    z-index: 3000; /* Ensure the dropdown appears above other elements */
+}
+
+.profile:hover .profile-dropdown {
+    opacity: 1;
+    max-height: 400px; /* Adjust based on the number of items */
+}
+
+.profile-dropdown h4 {
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-dropdown h4:hover {
+    background-color: #444;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+}
+
+/* Navigation Styles */
+.navcontainer {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    z-index: 0; /* Ensure navigation is below the header and dropdown */
+}
+
+.nav-option {
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-option h3 {
+    margin: 0;
+}
+
+.nav-option:hover {
+    background-color: #444;
+}
+
+.nav-option:hover .main-submenu {
+    max-height: 300px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Submenu Styles */
+.main-submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.main-submenu h4 {
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-submenu h4:hover {
+    background-color: #555;
+}
+
+/* Main Content Styles */
+.main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+
+
+/* Add New Apprentice Page */
+#add-new-apprentice-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#add-new-apprentice-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#add-new-apprentice-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+    position: relative; /* Added to position dropdown correctly */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+#add-new-apprentice-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#add-new-apprentice-page input[type="text"],
+#add-new-apprentice-page input[type="email"],
+#add-new-apprentice-page input[type="password"],
+#add-new-apprentice-page input[type="date"] { /* Add date input styling */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-new-apprentice-page button[type="submit"] {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-new-apprentice-page button[type="submit"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+#add-new-apprentice-page h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+/* Specific Styling for Date Fields */
+#apprentice-start-date,
+#apprentice-end-date {
+    width: calc(50% - 10px); /* Adjust width for better alignment */
+    display: inline-block; /* Ensure both date fields are on the same line */
+    padding: 5px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+    #apprentice-start-date,
+    #apprentice-end-date {
+        width: 100%; /* Full width on small screens */
+        display: block; /* Stack the date fields vertically */
+    }
+}
+
+/* Dropdown Styling */
+.profile-dropdown,
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    right: 0; /* Align dropdown to the right of the parent */
+    top: 100%; /* Position below the parent element */
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px; /* Adjust width as necessary */
+}
+
+.profile-dropdown h4,
+.dropdown-item {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile:hover .profile-dropdown,
+.form-group:hover .dropdown {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f4f9;
+}
+
+
+/* Modify Apprentice Page */
+#modify-apprentice-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#modify-apprentice-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#modify-apprentice-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#modify-apprentice-page .form-group {
+    margin-bottom: 15px;
+}
+
+#modify-apprentice-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#modify-apprentice-page input[type="text"],
+#modify-apprentice-page input[type="email"],
+#modify-apprentice-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#modify-apprentice-page button[type="submit"],
+#modify-apprentice-page button[type="button"] {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#modify-apprentice-page button[type="submit"]:hover,
+#modify-apprentice-page button[type="button"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Apprentice Details Container */
+#apprentice-details-container {
+    margin-top: 20px;
+}
+
+#apprentice-details-container .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#apprentice-details-container .form-row .form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#apprentice-details-container .form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #apprentice-details-container .form-row {
+        flex-direction: column;
+    }
+    #apprentice-details-container .form-row .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    #apprentice-details-container .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/*delete apprentice page*/
+#delete-apprentice-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#delete-apprentice-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#delete-apprentice-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#delete-apprentice-page .form-group {
+    margin-bottom: 15px;
+}
+
+#delete-apprentice-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#delete-apprentice-page input[type="text"],
+#delete-apprentice-page input[type="email"],
+#delete-apprentice-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#delete-apprentice-page button[type="submit"],
+#delete-apprentice-page button[type="button"] {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#delete-apprentice-page button[type="submit"]:hover,
+#delete-apprentice-page button[type="button"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Apprentice Details Container */
+#delete-apprentice-page #apprentice-details-container {
+    margin-top: 20px;
+}
+
+#delete-apprentice-page #apprentice-details-container .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#delete-apprentice-page #apprentice-details-container .form-row .form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#delete-apprentice-page #apprentice-details-container .form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #delete-apprentice-page #apprentice-details-container .form-row {
+        flex-direction: column;
+    }
+    #delete-apprentice-page #apprentice-details-container .form-row .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    #delete-apprentice-page #apprentice-details-container .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/* Add New Reporting Officer Page */
+#add-new-reporting-officer-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#add-new-reporting-officer-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#add-new-reporting-officer-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+#add-new-reporting-officer-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#add-new-reporting-officer-page input[type="text"],
+#add-new-reporting-officer-page input[type="email"],
+#add-new-reporting-officer-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-new-reporting-officer-page button[type="submit"] {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-new-reporting-officer-page .login-info h3 {
+    font-size: 20px;
+    color: #FF8C42;
+    margin-bottom: 10px;
+}
+
+
+#add-new-reporting-officer-page button[type="submit"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Modify Reporting Officer Page */
+#modify-reporting-officer-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#modify-reporting-officer-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#modify-reporting-officer-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#modify-reporting-officer-page .form-group {
+    margin-bottom: 15px;
+}
+
+#modify-reporting-officer-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#modify-reporting-officer-page input[type="text"],
+#modify-reporting-officer-page input[type="email"],
+#modify-reporting-officer-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#modify-reporting-officer-page .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#modify-reporting-officer-page .form-row-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#modify-reporting-officer-page .form-row .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#modify-reporting-officer-page .form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+#modify-reporting-officer-page button[type="submit"],
+#modify-reporting-officer-page button[type="button"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modify-reporting-officer-page button[type="submit"]:hover,
+#modify-reporting-officer-page button[type="button"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+#modify-reporting-officer-page .login-info h3 {
+    font-size: 20px;
+    color: #FF8C42;
+    margin-bottom: 10px;
+}
+
+/* Officer Details Container */
+#officer-details-container {
+    margin-top: 20px;
+}
+
+#officer-details-container .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#officer-details-container .form-row .form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#officer-details-container .form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #officer-details-container .form-row {
+        flex-direction: column;
+    }
+    #officer-details-container .form-row .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    #officer-details-container .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Delete Reporting Officer Page */
+#delete-reporting-officer-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#delete-reporting-officer-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#delete-reporting-officer-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#delete-reporting-officer-page .form-group {
+    margin-bottom: 15px;
+}
+
+#delete-reporting-officer-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#delete-reporting-officer-page input[type="text"],
+#delete-reporting-officer-page input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#delete-reporting-officer-page .form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#delete-reporting-officer-page .form-row input[type="text"] {
+    margin-right: 10px;
+    flex: 1;
+}
+
+#delete-reporting-officer-page .form-row button[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-reporting-officer-page .form-row button[type="button"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+#delete-reporting-officer-page button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#delete-reporting-officer-page button[type="submit"]:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Login Info Section */
+#delete-reporting-officer-page .login-info {
+    margin-top: 20px;
+}
+
+#delete-reporting-officer-page .login-info h3 {
+    font-size: 20px;
+    color: #FF8C42;
+    margin-bottom: 10px;
+}
+
+#delete-reporting-officer-page .login-info .form-group {
+    margin-bottom: 15px;
+}
+
+#delete-reporting-officer-page .login-info label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#delete-reporting-officer-page .login-info input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Results delete Table */
+#results-table-delete-officer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results-table-delete-officer th,
+#results-table-delete-officer td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#results-table-delete-officer th {
+    background-color: #f2f2f2;
+}
+
+#results-table-delete-officer td button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#results-table-delete-officer td button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+
+
+/* Results modify Table */
+#results-table-modify-officer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results-table-modify-officer th,
+#results-table-modify-officer td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#results-table-modify-officer th {
+    background-color: #f2f2f2;
+}
+
+#results-table-modify-officer td button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#results-table-modify-officer td button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Login Info Container */
+#login-info-container {
+    margin-top: 20px;
+}
+
+#login-info-container h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #FF8C42;
+}
+
+@media screen and (max-width: 768px) {
+    #modify-reporting-officer-page form {
+        flex-direction: column;
+    }
+    
+    #results-table-modify-officer {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+
+/* Report Container Styles */
+.report-container {
+    margin-top: 20px;
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-body {
+    margin-top: 10px;
+}
+
+.report-topic-heading, .items .item1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-tag {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Add space between elements */
+    margin-top: 20px;
+    max-width: 100%; /* Ensure container doesn't extend beyond screen width */
+}
+
+.search-container .input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: calc(33.333% - 20px); /* Ensure three items per row, minus gap space */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.search-container label {
+    margin-bottom: 5px;
+}
+
+.search-container input[type="text"] {
+    width: 100%; /* Use 100% width of the parent container */
+    padding: 10px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+    z-index: 0; /* Ensure the input field is below the autocomplete dropdown */
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: #FF8C42;
+    color: white;
+    cursor: pointer;
+    z-index: 0; /* Ensure the button is below the autocomplete dropdown */
+    width: auto; /* Prevent the button from stretching */
+    align-self: flex-start; /* Align button to the start of the container */
+}
+
+@media (max-width: 1200px) {
+    .search-container .input-group {
+        width: calc(50% - 20px); /* Adjust to two items per row for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: stretch; /* Stretch items to fill the container width */
+    }
+
+    .search-container .input-group {
+        width: 100%; /* Make input groups full width on smaller screens */
+    }
+
+    #search-btn {
+        width: 100%; /* Make the button full width on smaller screens */
+    }
+}
+
+
+/* Modify Reporting Officer Page */
+#modify-reporting-officer-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#modify-reporting-officer-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#modify-reporting-officer-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+#modify-reporting-officer-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#modify-reporting-officer-page input[type="text"],
+#modify-reporting-officer-page input[type="email"],
+#modify-reporting-officer-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#modify-reporting-officer-page button[type="submit"],
+#search-department {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modify-reporting-officer-page button[type="submit"]:hover,
+#search-department:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+#officer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#officer-table th, #officer-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#officer-table th {
+    background-color: #FF8C42;
+    color: white;
+}
+
+#officer-table td button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#officer-table td button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Delete Reporting Officer Page */
+#delete-reporting-officer-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#delete-reporting-officer-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#delete-reporting-officer-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+#delete-reporting-officer-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#delete-reporting-officer-page input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#delete-reporting-officer-page button[type="submit"],
+#search-department {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete-reporting-officer-page button[type="submit"]:hover,
+#search-department:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+#officer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#officer-table th, #officer-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#officer-table th {
+    background-color: #FF8C42;
+    color: white;
+}
+
+#officer-table td button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#officer-table td button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .navcontainer {
+        width: 100%;
+    }
+    .box-container {
+        flex-direction: column;
+        align-items: flex-end; /* Align to the right on small screens */
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-container input[type="text"] {
+        width: 100%; /* Full width on small screens */
+    }
+    #results-table th, #results-table td {
+        padding: 10px 5px;
+    }
+
+    #results-table td button {
+        padding: 3px 7px;
+    }
+
+}
+
+a {
+    color: #fefeff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.5); /* Medium orange shadow */
+}
+
+::selection {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+}
+
+
+/* Edit Admin Page */
+#edit-admin-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adjust as needed */
+}
+
+#edit-admin-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+#edit-admin-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#edit-admin-page .form-group {
+    margin-bottom: 15px;
+}
+
+#edit-admin-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#edit-admin-page input[type="text"],
+#edit-admin-page input[type="email"],
+#edit-admin-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+#edit-admin-page input[type="text"]:focus,
+#edit-admin-page input[type="email"]:focus,
+#edit-admin-page input[type="password"]:focus {
+    border-color: #FF8C42; /* Medium orange on focus */
+}
+
+#edit-admin-page button[type="submit"] {
+    background-color: #FF8C42; /* Medium orange */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#edit-admin-page button[type="submit"]:hover {
+    background-color: #FF7043; /* Darker shade of orange on hover */
+}
+
+
+/* Add New Admin Page */
+#add-new-admin-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adjust as needed */
+}
+
+#add-new-admin-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Green color */
+}
+
+#add-new-admin-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-new-admin-page .form-group {
+    margin-bottom: 15px;
+}
+
+#add-new-admin-page label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#add-new-admin-page input[type="text"],
+#add-new-admin-page input[type="email"],
+#add-new-admin-page input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+#add-new-admin-page input[type="text"]:focus,
+#add-new-admin-page input[type="email"]:focus,
+#add-new-admin-page input[type="password"]:focus {
+    border-color: #FF8C42; /* Green color on focus */
+}
+
+#add-new-admin-page button[type="submit"] {
+    background-color: #FF8C42; /* Green color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#add-new-admin-page button[type="submit"]:hover {
+    background-color: #e95d05; /* Darker shade of green on hover */
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.filters .left {
+    display: flex;
+    gap: 10px;
+}
+.filters .right {
+    display: flex;
+    align-items: center;
+}
+
+/*exprot*/
+#export-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#export-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Medium orange */
+}
+
+/* Filter Section Styling */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters .left,
+.filters .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* DataTable Styling */
+#exportTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#exportTable th, #exportTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#exportTable th {
+    background-color: #FF8C42;
+    color: white;
+}
+
+
+/* Edit Page Styling */
+#edit-page {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#edit-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FF8C42; /* Blue color for the heading */
+}
+
+/* Filter Section Styling */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters .left,
+.filters .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* DataTable Styling */
+#editTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#editTable th, 
+#editTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#editTable th {
+    background-color: #FF8C42; /* Blue color for the table header */
+    color: white;
+}
+
+#editTable .edit-btn.action-button {
+    padding: 12px 17px; /* Increase the padding for a larger button */
+    font-size: 14px; /* Increase the font size */
+    color: #fff;
+    background-color: #FF8C42; /* Match the reference color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 0 auto; /* Center the button */
+}
+
+#editTable .edit-btn.action-button:hover {
+    background-color: #e67e3a; /* Slightly darker orange on hover */
+}
+
+#editTable .edit-btn.action-button:disabled {
+    background-color: #6c757d; /* Gray for disabled button */
+    cursor: not-allowed;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #edit-page {
+        padding: 10px;
+    }
+
+    #editTable th, 
+    #editTable td {
+        padding: 8px;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filters .left, 
+    .filters .right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+/* Button Styling */
+.dt-buttons .dt-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: rgb(19, 18, 17);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dt-buttons .dt-button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .filters .left, .filters .right {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+/* Autocomplete styles */
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 1000; /* Ensure autocomplete appears above other elements */
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px; /* Limit the height of the dropdown */
+    overflow-y: auto; /* Add scroll if there are too many items */
+    background-color: #fff; /* Ensure a white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2px; /* Small gap between the input and the dropdown */
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    color: black;
+}
+
+.autocomplete-items div:hover {
+    background-color: #FF8C42;
+    color: #ffffff; /* Change text color to white on hover */
+}
+
+.autocomplete-active {
+    background-color: #FF8C42 !important; /* Ensure background color is applied */
+    color: #ffffff !important; /* Ensure text color is applied */
+}
+
+/* Nested dropdown styles */
+.nested-dropdown-container {
+    padding-left: 10px;
+}
+
+#department .location-item {
+    font-weight: bold;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #d4d4d4;
+    cursor: pointer;
+    position: relative; /* Ensure the submenu is positioned correctly */
+    z-index: 1001; /* Ensure location-item is above other elements */
+}
+
+#department .location-item:hover {
+    background-color: #FF8C42;
+    color: #ffffff; /* Change text color to white on hover */
+}
+
+#department .location-item .submenu {
+    display: none;
+    position: absolute; /* Ensure the submenu is positioned correctly */
+    top: 0;
+    left: 100%; /* Position to the right of the parent */
+    z-index: 1002; /* Ensure submenu is above location-item */
+    border: 1px solid #d4d4d4;
+    background-color: #FF8C42; /* Default submenu background color */
+    color: #000; /* Ensure submenu text is black */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 1px; /* Small gap between the parent and submenu */
+}
+
+#department .location-item:hover .submenu {
+    display: block;
+}
+
+#department .location-item .submenu .submenu-item {
+    padding: 8px 10px;
+    background-color: #FF8C42; /* Default submenu-item background color */
+    color: #000; /* Ensure submenu-item text is black */
+    border-bottom: 1px solid #d4d4d4;
+    cursor: pointer;
+}
+
+#department .location-item .submenu .submenu-item:hover {
+    background-color: #FF8C42; /* Change background to white on hover */
+    color: #000; /* Ensure text remains black */
+}
+
+#department .department-item {
+    padding: 8px 10px;
+    background-color: #FF8C42;
+    border-bottom: 1px solid #d4d4d4;
+    cursor: pointer;
+    z-index: 1003; /* Ensure department-item is above other elements */
+}
+
+#department .department-item:hover {
+    background-color: #FF8C42;
+    color: #ffffff; /* Change text color to white on hover */
+}
+
+/* Ensure higher specificity for the autocomplete submenu */
+.autocomplete-items .submenu {
+    background-color: #FF8C42; /* Default submenu background color */
+    color: #000; /* Ensure submenu text is black */
+}
+
+.autocomplete-items .submenu-item:hover {
+    background-color: #ffffff; /* Change background to white on hover */
+    color: #000; /* Ensure text remains black */
+}
+
+
+/* Table Styles */
+.results-container {
+    margin-top: 20px;
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results-table th, #results-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#results-table th {
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+}
+
+#results-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+#results-table tr:hover {
+    background-color: #ffe6cc; /* Light orange for hover effect */
+}
+
+/* Finalize All Button Style */
+#finalize-all-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42; /* Medium orange */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right; /* Aligns the button to the right */
+    margin-left: 10px;
+}
+
+#finalize-all-btn:hover {
+    background-color: #ff6600; /* Darker shade of orange for hover effect */
+}
+
+
+#results-table td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8C42;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#results-table td button:hover {
+    background-color: #ff751a; /* Darker shade of orange for hover effect */
+}
+
+/* Spinner Styles */
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it is above other elements */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #FF8C42; /* Medium orange */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
